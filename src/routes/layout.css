@@ -1,0 +1,67 @@
+@import 'tailwindcss';
+@plugin '@tailwindcss/forms';
+@plugin '@tailwindcss/typography';
+
+@theme {
+	/* --- Оттенки: холодный приглушённый зелёный --- */
+	--color-muted-teal-50: #f0f5f2;
+	--color-muted-teal-100: #e0ebe4;
+	--color-muted-teal-200: #c1d7ca;
+	--color-muted-teal-300: #a2c3af;
+	--color-muted-teal-400: #84ae95;
+	--color-muted-teal-500: #659a7a;
+	--color-muted-teal-600: #517b62;
+	--color-muted-teal-700: #3c5d49;
+	--color-muted-teal-800: #283e31;
+	--color-muted-teal-900: #141f18;
+	--color-muted-teal-950: #0e1611;
+
+	/* --- Оттенки: приглушённая терракота (акцент) --- */
+	--color-muted-terra-50: #faf3f0;
+	--color-muted-terra-100: #f5e0d8;
+	--color-muted-terra-200: #ecc7b8;
+	--color-muted-terra-300: #e8b5a3;
+	--color-muted-terra-400: #d99a83;
+	--color-muted-terra-500: #c87860;
+	--color-muted-terra-600: #b05f47;
+	--color-muted-terra-700: #874a39;
+	--color-muted-terra-800: #5c3226;
+	--color-muted-terra-900: #3a1f18;
+	--color-muted-terra-950: #1e0f0c;
+
+	/* --- Семантические токены --- */
+	--color-text: var(--color-muted-teal-950);
+	--color-muted: var(--color-muted-teal-600); /* вторичный текст: подписи, #id */
+	--color-background: var(--color-muted-teal-50);
+	--color-surface: #ffffff; /* фон карточек поверх background */
+	--color-border: var(--color-muted-teal-300);
+
+	--color-primary: var(--color-muted-teal-600);
+	--color-primary-foreground: #ffffff;
+
+	--color-secondary: var(--color-muted-teal-200);
+	--color-secondary-foreground: var(--color-muted-teal-900);
+
+	--color-accent: var(--color-muted-terra-600);
+	--color-accent-foreground: #ffffff;
+
+	--font-sans: 'Golos Text', sans-serif;
+	--font-mono: 'JetBrains Mono', monospace;
+}
+
+:root {
+	color-scheme: light;
+
+	background-color: var(--color-background);
+	color: var(--color-text);
+
+	font-family: var(--font-sans);
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+html {
+	scrollbar-color: theme(--color-muted) transparent;
+	scrollbar-width: thin;
+	scrollbar-base-color: theme(--color-background);
+}
